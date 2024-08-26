@@ -12,8 +12,9 @@ jobs:
       # Устанавливаем Node.js
       - uses: actions/setup-node@v4
       with:
-      node-version: .node-version
-      cache: 'npm' # ускоряет повторные сборки
+        node-version: '18.x'
+      # ускоряет повторные сборки
+        cache: 'npm'
       # Ставим зависимости
       - run: make install
       # Запускаем линтер
